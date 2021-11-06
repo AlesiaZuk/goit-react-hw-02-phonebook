@@ -30,7 +30,8 @@ ul {
 
 .section {
   display: inline-block;
-  padding: 20px;
+
+  width: 350px;
 
   border-style: none;
   border-radius: 5px;

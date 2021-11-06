@@ -6,9 +6,10 @@ class Filter extends Component {
     const { filter, handleChange } = this.props;
 
     return (
-      <label>
+      <label className={s.filter_label}>
         Find contacts by name:
         <input
+          className={s.filter_input}
           type="text"
           name="filter"
           value={filter}

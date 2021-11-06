@@ -29,9 +29,10 @@ class Form extends Component {
 
     return (
       <form onSubmit={this.handleSubmit}>
-        <label>
+        <label className={s.form_label}>
           Name:
           <input
+            className={s.form_input}
             type="text"
             name="name"
             value={name}
@@ -42,9 +43,10 @@ class Form extends Component {
             required
           />
         </label>
-        <label>
+        <label className={s.form_label}>
           Number
           <input
+            className={s.form_input}
             type="tel"
             name="number"
             value={number}
@@ -55,7 +57,11 @@ class Form extends Component {
             required
           />
         </label>
-        <button type="submit" onClick={this.handleAddContact}>
+        <button
+          className={s.form_button}
+          type="submit"
+          onClick={this.handleAddContact}
+        >
           Add contact
         </button>
       </form>

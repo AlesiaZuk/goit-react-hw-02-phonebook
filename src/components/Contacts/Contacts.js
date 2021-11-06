@@ -15,10 +15,11 @@ class Contacts extends Component {
                 )
                 .map((contact) => (
                   <li key={contact.id}>
-                    <p>
+                    <p className={s.contacts_text}>
                       {contact.name}: {contact.number}
                     </p>
                     <button
+                      className={s.contacts_button}
                       key={contact.id}
                       type="button"
                       onClick={handleDeleteContact}
@@ -28,11 +29,12 @@ class Contacts extends Component {
                   </li>
                 ))
             : contacts.map((contact) => (
-                <li key={contact.id}>
-                  <p>
+                <li className={s.contacts_item} key={contact.id}>
+                  <p className={s.contacts_text}>
                     {contact.name}: {contact.number}
                   </p>
                   <button
+                    className={s.contacts_button}
                     key={contact.id}
                     type="button"
                     onClick={handleDeleteContact}
