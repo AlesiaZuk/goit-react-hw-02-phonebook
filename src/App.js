@@ -54,10 +54,6 @@ class App extends Component {
   handleDeleteContact = (e) => {
     const { contacts } = this.state;
     const { key } = e.target;
-    console.log("click");
-
-    console.log(e.target);
-    console.log(key);
 
     const elementForRemove = contacts.find((contact) => contact.id === key);
     const elementForRemoveIndex = contacts.indexOf(elementForRemove);

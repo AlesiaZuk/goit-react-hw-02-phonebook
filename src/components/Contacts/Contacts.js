@@ -1,4 +1,6 @@
 import { Component } from "react";
+import PropTypes from "prop-types";
+
 import s from "./Contacts.module.css";
 
 class Contacts extends Component {
@@ -48,4 +50,10 @@ class Contacts extends Component {
     );
   }
 }
+
+Contacts.propTypes = {
+  contacts: PropTypes.array.isRequired,
+  filter: PropTypes.string.isRequired,
+  handleDeleteContact: PropTypes.func.isRequired,
+};
 export default Contacts;

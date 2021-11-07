@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { Component } from "react";
 
 import s from "./Form.module.css";
@@ -68,5 +69,9 @@ class Form extends Component {
     );
   }
 }
+
+Form.propTypes = {
+  handleAddContact: PropTypes.func.isRequired,
+};
 
 export default Form;
