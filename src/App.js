@@ -9,10 +9,6 @@ import Filter from "./components/Filter/Filter";
 const sectionClass = ["section"];
 
 class App extends Component {
-  static defaultProps = {};
-
-  static propTypes = {};
-
   state = {
     contacts: [
       { id: "id-1", name: "Alesia Zuk", number: "459-12-56" },
@@ -61,8 +57,16 @@ class App extends Component {
     this.setState({ contacts: [...contacts] });
   };
 
+  filterContacts = () => {
+    const { filter, contacts } = this.state;
+
+    return contacts.filter((contact) =>
+      contact.name.toLowerCase().includes(filter.toLowerCase())
+    );
+  };
+
   render() {
-    const { contacts, filter } = this.state;
+    const { filter } = this.state;
 
     return (
       <section className={sectionClass}>
@@ -72,8 +76,7 @@ class App extends Component {
         <Section title="Contacts">
           <Filter filter={filter} handleChange={this.handleChange}></Filter>
           <Contacts
-            contacts={contacts}
-            filter={filter}
+            filterContacts={this.filterContacts()}
             handleDeleteContact={this.handleDeleteContact}
           ></Contacts>
         </Section>
