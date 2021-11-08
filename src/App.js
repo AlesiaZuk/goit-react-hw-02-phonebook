@@ -49,9 +49,9 @@ class App extends Component {
 
   handleDeleteContact = (e) => {
     const { contacts } = this.state;
-    const { key } = e.target;
+    const { id } = e.target;
 
-    const elementForRemove = contacts.find((contact) => contact.id === key);
+    const elementForRemove = contacts.find((contact) => contact.id === id);
     const elementForRemoveIndex = contacts.indexOf(elementForRemove);
     contacts.splice(elementForRemoveIndex, 1);
     this.setState({ contacts: [...contacts] });

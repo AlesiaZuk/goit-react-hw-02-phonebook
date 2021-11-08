@@ -12,7 +12,7 @@ function Contacts({ filterContacts, handleDeleteContact }) {
           </p>
           <button
             className={s.contacts_button}
-            key={contact.id}
+            id={contact.id}
             type="button"
             onClick={handleDeleteContact}
           >
